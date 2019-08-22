@@ -1,22 +1,18 @@
 package com.nopal.awokowokwok
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity;
-import android.view.Menu
-import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.main_frame_fragment.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.my_friend_add_fragment)
+        setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+        tampilMyFriendFragment()
 
     }
 

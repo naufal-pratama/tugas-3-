@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.extensions.LayoutContainer
+import kotlinx.android.synthetic.main.my_friend_item.*
+import kotlinx.android.synthetic.main.my_friend_item.view.*
 
 
 class myfriendadapter(
@@ -26,14 +28,15 @@ class myfriendadapter(
 
     override fun getItemCount(): Int = item.size
 
+
     class ViewHolder(
         val context: Context,
         override val containerView: View
     ) : RecyclerView.ViewHolder(containerView), LayoutContainer {
         fun bindItem(item: mapren, listener: (mapren) -> Unit) {
-
-        }
-
-
+            txtFriendName.text = item.nama
+            txtFriendEmail.text = item.email
+            txtFriendTelp.text = item.telp
+            itemView.setOnClickListener { listener(item) }
     }
-}
+}}

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
+              android:id="@+id/container"
               android:orientation="vertical"
               android:background="#FFFFFF">
 
@@ -15,7 +16,7 @@
             android:paddingBottom="8dp">
 
         <ImageView
-                android:id="@+id/imgProfile"
+                android:id="@+id/imgProfile2"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:scaleType="centerCrop"/>

@@ -1,18 +1,19 @@
 package com.nopal.awokowokwok
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.*
-import kotlinx.android.synthetic.main.my_friend_add_fragment.*
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
+@Entity
 data class  mapren(
-
+    @PrimaryKey(autoGenerate = true)
+    val temanId: Int? = null,
     val nama : String,
     val kelamin : String,
     val email : String,
     val telp : String,
-    val alamat : String
+    val alamat : String,
+
+    @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
+    var image: ByteArray? = null
 )
